@@ -1,24 +1,43 @@
-import React from 'react';
-import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import * as React from 'react';
+//import all necessary libraries here, e.g., Material-UI Typography, as follows
+import Typography from '@mui/material/Typography';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
 
-function MovieSelection({ movies, selectedMovie, handleMovieChange }) {
+const MovieSelection = (props) => {
+
+  //states declarations
+  //constants and functions declarations
+
   return (
-    <FormControl fullWidth>
-      <InputLabel id="movie-select-label">Select a movie</InputLabel>
+    <>
+    <div>
+      <p> Select a Movie: </p>
+      <FormControl fullWidth>
       <Select
-        value={selectedMovie}
-        onChange={handleMovieChange}
-        labelId="movie-select-label"
-        id="movie-select"
+            label="Select a Movie"
+            id="movie-select"
+            value={props.selectedMovie}
+            onChange={props.handleMovieChange}
       >
-        {movies.map((movie, index) => (
-          <MenuItem key={index} value={movie}>
-            {movie}
-          </MenuItem>
-        ))}
+         {props.movies.map((title, index) => (
+            <MenuItem
+              key={index}
+              value={title.id}
+            >
+              {title.name}
+            </MenuItem>
+          ))}
       </Select>
-    </FormControl>
+      </FormControl>
+    </div>
+
+    
+    </>
   );
+
 }
+
 
 export default MovieSelection;
