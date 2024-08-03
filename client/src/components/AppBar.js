@@ -20,7 +20,7 @@ const NavigationBar = ()  => {
                     <Button id="nav-landing" sx ={{color:"#FEF3E2", fontFamily:'Courier New'}} onClick={() => navigate ("/")}>Landing</Button>
                     <Button id="nav-search" sx ={{color:"#FEF3E2", fontFamily:'Courier New'}} onClick={() => navigate ("/Search")}>Search</Button>
                     <Button id="nav-review" sx ={{color:"#FEF3E2", fontFamily:'Courier New'}} onClick={() => navigate ("/Review")}>Review</Button>
-                    <Button id="nav-myPage" sx ={{color:"#FEF3E2", fontFamily:'Courier New'}} onClick={() => navigate ("/MyPage")}>MyPage</Button>
+                    <Button id="nav-myPage" sx ={{color:"#FEF3E2", fontFamily:'Courier New'}} onClick={() => navigate ("/MyPage")}>My Page</Button>
                 </Toolbar>
             </AppBar>
         </Box>
